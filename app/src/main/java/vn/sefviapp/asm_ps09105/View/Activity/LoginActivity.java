@@ -7,10 +7,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.net.ConnectivityManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Base64;
@@ -54,6 +57,7 @@ import vn.sefviapp.asm_ps09105.Api.NguoiDungApi.GetEmailCheckLoginApilml;
 import vn.sefviapp.asm_ps09105.Interface.LoginListener;
 import vn.sefviapp.asm_ps09105.Model.Account;
 import vn.sefviapp.asm_ps09105.R;
+import vn.sefviapp.asm_ps09105.Receive.NetworkChangeReceive;
 
 public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.editTextEmail)
@@ -62,7 +66,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText edtPassword;
     LoginAccountApiIml accountApiIml;
     //    EditText edtEmail, edtPassword;
-    Button btnLogin, btnLoginWithFacebook, btnLoginWithGoogle;
+    static Button btnLogin, btnLoginWithFacebook, btnLoginWithGoogle;
     TextView txtResetPassword;
     ProgressDialog progressDialog;
     private GoogleSignInClient mGoogleSignInClient;
@@ -71,11 +75,15 @@ public class LoginActivity extends AppCompatActivity {
     LoginManager loginManager;
     List<String> preFacebook = Arrays.asList("public_profile", "email");
     CallbackManager manager;
-
+    NetworkChangeReceive networkChangeReceive;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+
+        networkChangeReceive = new NetworkChangeReceive();
+        registerNetworkBroadcastForNougat();
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -90,7 +98,22 @@ public class LoginActivity extends AppCompatActivity {
         initControls();
         initEvents();
     }
+    private void registerNetworkBroadcastForNougat() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            registerReceiver(networkChangeReceive, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            registerReceiver(networkChangeReceive, new IntentFilter(ConnectivityManager.CONNECTIVITY_ACTION));
+        }
+    }
 
+    protected void unregisterNetworkChanges() {
+        try {
+            unregisterReceiver(networkChangeReceive);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
+    }
     private void initEvents() {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -368,5 +391,16 @@ public class LoginActivity extends AppCompatActivity {
         }).executeAsync();
 
     }
-
+    public static void checkIsConnects(boolean value){
+        if (value){
+            btnLogin.setEnabled(true);
+        }else {
+            btnLogin.setEnabled(false);
+        }
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterNetworkChanges();
+    }
 }
