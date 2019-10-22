@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBarEditSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/colorWhite"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <vn.sefviapp.asm_ps09105.View.ImageHelper
+                    android:id="@+id/imgEditSach"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/img_add" />
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spTheLoaiEdit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/spinner"
+                android:gravity="center" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputTenSach"
+                style="@style/parent"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/edtEditTenSach"
+                    style="@style/modifiedEditText"
+                    android:hint="Tên sách"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputTacGia"
+                style="@style/parent"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/edtEditTacGia"
+                    style="@style/modifiedEditText"
+                    android:hint="Tác giả"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputNXB"
+                style="@style/parent"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/edtEditNXB"
+                    style="@style/modifiedEditText"
+                    android:hint="Nhà xuất bản"
+                    android:inputType="text"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputGiaBan"
+                style="@style/parent"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/edtEditGiaBan"
+                    style="@style/modifiedEditText"
+                    android:hint="Giá bán"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputSoLuong"
+                style="@style/parent"
+                android:layout_margin="5dp">
+
+                <EditText
+                    android:id="@+id/edtEditSoLuong"
+                    style="@style/modifiedEditText"
+                    android:hint="Số lượng"
+                    android:inputType="number"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <Button
+                    android:id="@+id/btnEditSach"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/login_button_bk"
+                    android:text="Cập Nhật"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/txtCustomTenSach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sách Lập Trình"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:layout_weight="1"
+        />
+</LinearLayout>

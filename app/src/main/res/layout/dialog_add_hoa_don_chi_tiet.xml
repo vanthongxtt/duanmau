@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/dialogTheLoaiTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Hóa Đơn Chi Tiết"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/text_title"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtSearchDialogHoaDonChiTiet"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Tìm Kiếm Sách"
+            android:drawableRight="@drawable/ic_search_black_24dp"
+            android:drawablePadding="10dp"
+            android:background="@drawable/text_edt_background"
+            android:layout_margin="5dp"
+            android:padding="10dp"/>
+        <ListView
+            android:id="@+id/lvShowDialogHoaDonChiTiet"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_margin="5dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtDialogSoLuongHoaDonChiTiet"
+                style="@style/modifiedEditText"
+                android:inputType="number"
+                android:maxLines="1"
+                android:hint="Số Lượng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnDialogAddHoaDonChiTietDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:background="@drawable/login_button_bk"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="5"
+            android:layout_margin="5dp"/>
+        <Button
+            android:id="@+id/btnDialogHuyAddHoaDonChiTiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:background="@drawable/login_button_bk"
+            android:textColor="@color/colorWhite"
+            android:layout_weight="5"
+            android:layout_margin="5dp"/>
+    </LinearLayout>
+
+</LinearLayout>

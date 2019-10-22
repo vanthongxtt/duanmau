@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Asm_ps09105</string>
+
+
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Mật khẩu</string>
+
+    <string name="facebook_app_id">3074517939287325</string>
+    <string name="fb_login_protocol_scheme">fb3074517939287325</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

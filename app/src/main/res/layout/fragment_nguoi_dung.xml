@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".View.Fragment.NguoiDungFragment">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/toolbarlayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <vn.sefviapp.asm_ps09105.View.ImageHelper
+                    android:id="@+id/imageInfoNguoiDung"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_sach" />
+
+                <TextView
+                    android:id="@+id/txtNameNguoiDung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|bottom"
+                    android:padding="15dp"
+                    android:text="Abc"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appBar"
+            android:layout_margin="20dp"
+            android:padding="10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/btnEditThongTinUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button"
+                    android:drawableLeft="@drawable/ic_create_black_24dp"
+                    android:drawableTint="@color/colorWhite"
+                    android:padding="10dp"
+                    android:text="Chỉnh Sửa Thông Tin"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnQuanLyNguoiDung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button"
+                    android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                    android:drawableTint="@color/colorWhite"
+                    android:padding="10dp"
+                    android:text="Quản Lý Người Dùng"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnDoMatKhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button"
+                    android:drawableLeft="@drawable/ic_https_black_24dp"
+                    android:drawableTint="@color/colorWhite"
+                    android:padding="10dp"
+                    android:text="Đổi Mật Khẩu"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btnDangXuat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/button"
+                    android:drawableLeft="@drawable/ic_exit_to_app_black_24dp"
+                    android:drawableTint="@color/colorWhite"
+                    android:padding="10dp"
+                    android:text="Đăng xuất"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardView"
+            android:padding="10dp"
+            android:text="Phát triển bởi Lâm Văn Thông - PS09105"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+</ScrollView>

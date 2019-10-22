@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/loginCard"
+    app:cardCornerRadius="@dimen/loginCardRadius"
+    android:elevation="5dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/loginViewsMargin"
+    android:layout_marginBottom="@dimen/loginViewsMargin"
+    android:background="@color/whiteCardColor">
+    <LinearLayout
+        style="@style/linearParent"
+        android:layout_gravity="center"
+        android:padding="@dimen/loginViewsMargin">
+
+        <TextView
+            style="@style/headerTextPrimary"
+            android:text="Đăng nhập"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmail"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextEmail"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:text="vanthongxtt@gmail.com"
+                android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                android:hint="@string/login_email_hint"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPassword"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin">
+            <EditText
+                android:id="@+id/editTextPassword"
+                style="@style/modifiedEditText"
+                android:drawableLeft="@drawable/ic_https_black_24dp"
+                android:hint="@string/login_password_hint"
+                android:drawablePadding="10dp"
+                android:text="7121321"
+                android:maxLines="1"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txtResetPassword"
+            style="@style/viewParent"
+            android:textAlignment="textEnd"
+            android:text="Quên mật khẩu?"
+            android:textColor="@color/primaryTextColor"
+            android:textSize="@dimen/newsMoreTextSize"
+            android:layout_gravity="end"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/loginButton"
+            android:text="Đăng nhập"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <Button
+            android:id="@+id/btnLoginWithFacebook"
+            style="@style/loginButton"
+            android:text="Đăng nhập bằng FaceBook"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_btn_fb"
+            android:drawableLeft="@drawable/facebook"
+            android:padding="10dp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+        <Button
+            android:id="@+id/btnLoginWithGoogle"
+            style="@style/loginButton"
+            android:text="Đăng nhập bằng Google"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/login_btn_fb"
+            android:drawableLeft="@drawable/google"
+            android:padding="10dp"
+            android:textColor="@color/primaryTextColor"
+            android:layout_marginTop="@dimen/loginViewsMargin"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0573ff</color>
+    <color name="colorPrimaryDark">#0573ff</color>
+    <color name="colorAccent">#0573ff</color>
+
+
+    <color name="whiteTextColor">#fff</color>
+    <color name="primaryTextColor">#0573ff</color>
+    <color name="loginBkColor">#f0f0f0</color>
+
+    <color name="whiteCardColor">#fff</color>
+
+    <color name="colorWhite">#fff</color>
+    <color name="colorHome">#e82219</color>
+</resources>

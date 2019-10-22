@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sửa Thông Tin Người Dùng"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/text_title"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textEmailNguoiDung"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtEmailNguoiDungDialog"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:hint="Email"
+                android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textNameNguoiDung"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtNameNguoiDungDialog"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:hint="Họ và Tên"
+                android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textSoDienThoaiNguoiDungDialog"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtSoDienThoaiNguoiDungDialog"
+                style="@style/modifiedEditText"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:hint="Số điện thoại"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textDiaChiNguoiDungDialog"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtDiaChiNguoiDungDialog"
+                style="@style/modifiedEditText"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:hint="Địa chỉ"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:drawablePadding="10dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnDialogCapNhatInfoNguoiDung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cập nhật"
+                android:background="@drawable/login_button_bk"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="5"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/btnDialogThoaiInfoNguoiDung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thoát"
+                android:background="@drawable/login_button_bk"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="5"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

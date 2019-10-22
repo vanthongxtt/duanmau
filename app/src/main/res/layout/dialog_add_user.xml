@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm Người Dùng"
+        android:textStyle="bold"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/text_title"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textSize="24sp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <vn.sefviapp.asm_ps09105.View.ImageHelper
+                android:id="@+id/imgAddUsers"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/img_add"
+                android:layout_margin="10dp"/>
+        </RelativeLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputEmailUsers"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtEmailUsers"
+                style="@style/modifiedEditText"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Email người dùng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPasswordUsers"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtPasswordUsers"
+                style="@style/modifiedEditText"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_https_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Mật khẩu người dùng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputTenUsers"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtTenUsers"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_account_circle_black_24dp"
+                android:hint="Họ và Tên người dùng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputPhoneUsers"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtPhoneUsers"
+                style="@style/modifiedEditText"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+                android:drawablePadding="10dp"
+                android:hint="Số điện thoại người dùng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputDiaChiUsers"
+            style="@style/parent"
+            android:layout_margin="5dp">
+            <EditText
+                android:id="@+id/edtDiaChiUsers"
+                style="@style/modifiedEditText"
+                android:inputType="text"
+                android:maxLines="1"
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_location_on_black_24dp"
+                android:hint="Địa chỉ người dùng"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnDialogAddUsersNews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm"
+                android:background="@drawable/login_button_bk"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="5"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/btnDialogHuyAddUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:background="@drawable/login_button_bk"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="5"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>

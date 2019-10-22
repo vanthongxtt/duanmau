@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_thongke"
+        android:icon="@drawable/ic_insert_chart_black_24dp"
+        android:title="Thống kê" />
+
+    <item
+        android:id="@+id/navigation_theloai"
+        android:icon="@drawable/ic_widgets_black_24dp"
+        android:title="Thể loại" />
+    <item
+        android:id="@+id/navigation_hoadon"
+        android:icon="@drawable/ic_assignment_black_24dp"
+        android:title="Hóa đơn" />
+    <item
+        android:id="@+id/navigation_sach"
+        android:icon="@drawable/ic_library_books_black_24dp"
+        android:title="Sách" />
+    <item
+        android:id="@+id/navigation_nguoidung"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="Người dùng"/>
+</menu>
